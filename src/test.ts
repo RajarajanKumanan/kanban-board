@@ -23,4 +23,4 @@ getTestBed().initTestEnvironment(
 const context = require.context('./', true, /\.spec\.ts$/);
 // And load the modules.
 if (context.length > 0)
-  context.keys().map(context);
+  context.keys().forEach(context);
