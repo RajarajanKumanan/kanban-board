@@ -1,0 +1,42 @@
+<mat-toolbar class="rt-title-card">
+  <mat-icon class="mat-18">dashboard</mat-icon>
+  <span style="margin: 0px 30px;">Kanban Board</span>
+  <span class="spacer"></span>
+  <mat-icon class="mat-18">person</mat-icon>
+</mat-toolbar>
+
+<mat-drawer-container class="main-container">
+  <mat-drawer mode="side" opened class="sideMenu-container">
+    <mat-icon class="mat-18">home</mat-icon>
+    <mat-icon class="mat-18">filter</mat-icon>
+    <mat-icon class="mat-18">gps_fixed</mat-icon>
+    <mat-icon class="mat-18">message</mat-icon>
+    <mat-icon class="mat-18">settings</mat-icon>
+  </mat-drawer>
+  <mat-drawer-content class="main-content">
+
+    <mat-grid-list cols="6" rowHeight="100%">
+      <mat-grid-tile>
+        <app-kanban-board kanbanBoardTitle="Candidates_List" class="holder"></app-kanban-board>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <app-kanban-board kanbanBoardTitle="Technical_Test" class="holder"></app-kanban-board>
+        
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <app-kanban-board kanbanBoardTitle="Interview" class="holder"></app-kanban-board>
+        
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <app-kanban-board kanbanBoardTitle="HR" class="holder"></app-kanban-board>
+        
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <app-kanban-board kanbanBoardTitle="Offer_Accepted" class="holder"></app-kanban-board>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <app-kanban-board kanbanBoardTitle="Offer_Rejected" class="holder"></app-kanban-board>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </mat-drawer-content>
+</mat-drawer-container>

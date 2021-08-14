@@ -1,0 +1,11 @@
+<span class="kanban-title">{{kanbanBoardTitle}}</span>
+<div cdkDropList id="{{selectedKanban.id}}"[cdkDropListData]="selectedKanban.config_arr"
+    [cdkDropListConnectedTo]="listOfLists" class="candidate-list" (cdkDropListDropped)="drop($event)">
+    <div class="candidate-box" *ngFor="let item of selectedKanban.config_arr" cdkDrag>
+        <span class="cardName">{{item.name}}</span>
+        <span class="divider"></span>
+        <span class="cardSkilsName">
+            <mat-icon class="mat-18">school</mat-icon>: {{item.skills}}
+        </span>
+    </div>
+</div>

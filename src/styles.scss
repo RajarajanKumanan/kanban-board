@@ -1,0 +1,25 @@
+$rt-app-bg: #f5f7fb;
+
+$rt-dark-color: #2c3e50;
+$rt-lite-color: #34495e;
+$rt-dark-bg: #bdc3c7;
+$rt-lite-bg: #ecf0f1;
+html,
+body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif !important;
+    background-color: $rt-app-bg;
+}
+
+.mat-toolbar {
+    height: 7vh !important;
+}
+
+.divider {
+    border-bottom: 1px solid darkblue;
+    display: block;
+    width: 90%;
+}
