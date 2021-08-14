@@ -116,9 +116,8 @@ export class KanbanBoardComponent implements OnInit {
 
   ngOnInit(): void {
     this.listOfLists = Object.keys(this.kanbanBoardConfig.catagory);
-    //console.log(this.listOfLists)
+    
     if (this.kanbanBoardTitle) {
-
       this.selectedKanban = this.kanbanBoardConfig.catagory[this.kanbanBoardTitle]
       console.log(this.selectedKanban)
       this.kanbanBoardTitle = this.kanbanBoardTitle.replace("_", " ");
