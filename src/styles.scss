@@ -1,9 +1,13 @@
 $rt-app-bg: #f5f7fb;
-
 $rt-dark-color: #2c3e50;
 $rt-lite-color: #34495e;
 $rt-dark-bg: #bdc3c7;
 $rt-lite-bg: #ecf0f1;
+$rt-app-global-font-color: hsl(226deg 20% 28%);
+$rt-app-global-icon-color: hsl(227deg 66% 51%);
+$rt-app-list-bg: hsl(192deg 33% 97%);
+$rt-app-board-font-color: #a3aabe;
+
 html,
 body {
     height: 100%;
@@ -22,4 +26,19 @@ body {
     border-bottom: 1px solid darkblue;
     display: block;
     width: 90%;
+}
+
+.cdk-drag-preview {
+    box-sizing: border-box;
+    border-radius: 4px;
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14),
+        0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.cdk-drag-placeholder {
+    opacity: 0;
+}
+
+.cdk-drag-animating {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
 }

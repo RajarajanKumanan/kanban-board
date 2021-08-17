@@ -15,28 +15,14 @@
   </mat-drawer>
   <mat-drawer-content class="main-content">
 
-    <mat-grid-list cols="6" rowHeight="100%">
-      <mat-grid-tile>
-        <app-kanban-board kanbanBoardTitle="Candidates_List" class="holder"></app-kanban-board>
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <app-kanban-board kanbanBoardTitle="Technical_Test" class="holder"></app-kanban-board>
-        
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <app-kanban-board kanbanBoardTitle="Interview" class="holder"></app-kanban-board>
-        
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <app-kanban-board kanbanBoardTitle="HR" class="holder"></app-kanban-board>
-        
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <app-kanban-board kanbanBoardTitle="Offer_Accepted" class="holder"></app-kanban-board>
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <app-kanban-board kanbanBoardTitle="Offer_Rejected" class="holder"></app-kanban-board>
+    <mat-grid-list cols="6" rowHeight="98%" cdkDropList cdkDropListOrientation="horizontal" class="section-list"
+      (cdkDropListDropped)="drop($event)">
+
+      <mat-grid-tile *ngFor="let item of section_list.section_arr" cdkDrag  class="section-box" >
+        <app-kanban-board [kanbanBoardTitle]="item" class="holder"></app-kanban-board>
       </mat-grid-tile>
     </mat-grid-list>
   </mat-drawer-content>
+
+
 </mat-drawer-container>
